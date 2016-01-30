@@ -4,7 +4,12 @@
  * and open the template in the editor.
  */
 
-var user = angular.module('myApp.user', ["ngRoute"]);
+var userModuleDependencies = [
+    "myApp.user.service",
+    "myApp.user.factory"
+]
+
+var user = angular.module('myApp.user', userModuleDependencies);
 
 user.config(function($routeProvider) {
     $routeProvider

@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-contact.controller("ContactController", function($scope, $userModel) {
+contact.controller("ContactController", function($scope, userModel) {
    
     $scope.version = "1.0";
+    
+    userModel.findById();
     
 });
 

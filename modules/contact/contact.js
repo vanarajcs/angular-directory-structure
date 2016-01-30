@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 
-var contact = angular.module('myApp.contact', ["ngRoute", "myApp.user"]);
+var contactModuleDependencies = [
+    
+];
+
+var contact = angular.module('myApp.contact', contactModuleDependencies);
 
 contact.config(function($routeProvider) {
     $routeProvider

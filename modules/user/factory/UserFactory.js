@@ -3,26 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-user.factory('$userModel', function($http){
-    return {
-        findById: function(id) {
-            return $http.get("Api Url" + id);
-        },
+
+angular.module('myApp.user.factory',[])
+
+    .factory('userModel', function($http) {
         
-        findAll: function() {
-            return $http.get("Api Url");
-        },
-        
-        create : function(jsonObject) {
-            return $http.post("Api Url", jsonObject);
-        },
-        
-        update : function(jsonObject) {
-            return $http.post("Api Url", jsonObject);
-        },
-        
-        remove : function(id) {
-            return $http.get("Api Url");
-        }
-    };               
+        return {
+            
+            findById: function(id) {
+                return $http.get("Api Url" + id);
+            },
+
+            findAll: function() {
+                return $http.get("Api Url");
+            },
+
+            create : function(jsonObject) {
+                return $http.post("Api Url", jsonObject);
+            },
+
+            update : function(jsonObject) {
+                return $http.post("Api Url", jsonObject);
+            },
+
+            remove : function(id) {
+                return $http.get("Api Url");
+            }
+            
+        };
 });

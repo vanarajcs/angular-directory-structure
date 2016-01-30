@@ -3,59 +3,65 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-user.service("$userService", function() {
+
+
+angular.module('myApp.user.service',[])
     
-    var version;
+    .service('userService', function() {
+        
+        var version;
     
-    var name;
+        var name;
+
+        var email;
+
+        var hobbies = [];
+
+        var qualification = {};
     
-    var email;
-    
-    var hobbies = [];
-    
-    var qualification = {};
-    
-    return {
+        return {
+
+            setVersion : function(ver) {
+                version = ver;
+            },
+
+            getVersion : function() {
+                return version;
+            },
+
+            setName : function(na) {
+                name = na;
+            },
+
+            getName : function() {
+                return name;
+            },
+
+            setEmail : function(em) {
+                email = em;
+            },
+
+            getEmail : function() {
+                return email;
+            },
+
+            setHobbies : function(hob) {
+                hobbies = hob; 
+            },
+
+            getHobbies : function() {
+                return hobbies;
+            },
+
+            setQualification : function(qua) {
+                qualification = qua; 
+            },
+
+            getQualification : function() {
+                return qualification;
+            }
+        };
         
-        setVersion : function(ver) {
-            version = ver;
-        },
-        
-        getVersion : function() {
-            return version;
-        },
-        
-        setName : function(na) {
-            name = na;
-        },
-        
-        getName : function() {
-            return name;
-        },
-        
-        setEmail : function(em) {
-            email = em;
-        },
-        
-        getEmail : function() {
-            return email;
-        },
-        
-        setHobbies : function(hob) {
-            hobbies = hob; 
-        },
-        
-        getHobbies : function() {
-            return hobbies;
-        },
-        
-        setQualification : function(qua) {
-            qualification = qua; 
-        },
-        
-        getQualification : function() {
-            return qualification;
-        }
-    };
-});
+    });
+
 
